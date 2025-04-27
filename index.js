@@ -1,28 +1,34 @@
 const express = require("express");
 const app = express();
-const PORT = 3000;
+const port = 3000;
 
 app.use(express.json());
 
-let movies = [
-  { id: 1, title: "Inception", director: "Christopher Nolan", year: 2010 },
-  { id: 2, title: "The Matrix", director: "Wachowskis", year: 1999 },
-];
-
-let series = [
-  { id: 1, title: "Breaking Bad", seasons: 5, genre: "Crime" },
-  { id: 2, title: "Stranger Things", seasons: 4, genre: "Sci-Fi" },
-];
-
-let songs = [
-  { id: 1, title: "Blinding Lights", artist: "The Weeknd", year: 2020 },
-  { id: 2, title: "Shape of You", artist: "Ed Sheeran", year: 2017 },
-];
+let collections = {
+  movies: [
+    { id: 1, title: "The Movie One", year: 2022 },
+    { id: 2, title: "The Movie Two", year: 2023 },
+    { id: 1, title: "The Movie Three", year: 2024 },
+    { id: 2, title: "The Movie Four", year: 2025 },
+  ],
+  series: [
+    { id: 1, title: "The Series One", seasons: 1 },
+    { id: 2, title: "The Series Two", seasons: 2 },
+    { id: 1, title: "The Series Three", seasons: 5 },
+    { id: 2, title: "The Series Four", seasons: 8 },
+  ],
+  songs: [
+    { id: 1, title: "Soulful", artist: "Lindecis", year: 2020 },
+    { id: 2, title: "Sunday Song", artist: "Mick Man", year: 2019 },
+    { id: 1, title: "Ghetto Youth", artist: "Badman", year: 2023 },
+    { id: 2, title: "Firm and Strong", artist: "Popcaan", year: 2021 },
+  ],
+};
 
 const getCollection = (type) => {
-  if (type === "movies") return movies;
-  if (type === "series") return series;
-  if (type === "songs") return songs;
+  if (type === "movies") return collections.movies;
+  if (type === "series") return collections.series;
+  if (type === "songs") return collections.songs;
   return null;
 };
 
@@ -88,6 +94,6 @@ app.use((req, res) => {
   res.status(404).json({ message: "Route not found" });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Server is running on: http://localhost:${port}`);
 });
