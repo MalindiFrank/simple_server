@@ -1,0 +1,21 @@
+
+{
+  "movies": [
+    { "id": 1, "title": "The Movie One", "year": 2022 },
+    { "id": 2, "title": "The Movie Two", "year": 2023 },
+    { "id": 1, "title": "The Movie Three", "year": 2024 },
+    { "id": 2, "title": "The Movie Four", "year": 2025 }
+  ],
+  "series": [
+    { "id": 1, "title": "The Series One", "seasons": 1 },
+    { "id": 2, "title": "The Series Two", "seasons": 2 },
+    { "id": 1, "title": "The Series Three", "seasons": 5 },
+    { "id": 2, "title": "The Series Four", "seasons": 8 }
+  ],
+  "songs": [
+    { "id": 1, "title": "Soulful", "artist": "Lindecis", "year": 2020 },
+    { "id": 2, "title": "Sunday Song", "artist": "Mick Man", "year": 2019 },
+    { "id": 1, "title": "Ghetto Youth", "artist": "Badman", "year": 2023 },
+    { "id": 2, "title": "Firm and Strong", "artist": "Popcaan", "year": 2021 }
+  ]
+}
